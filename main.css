@@ -1,3 +1,16 @@
-p {
+h3 {
 	color: blue;
+	font-family: sans-serif;
+	font-stretch: all;
+	padding-left: 50px;
+	padding-right: 300px;
+}
+h1 {
+	color: yellow;
+	font-size: 100px;
+	font-family: serif;
+	padding-left: 50px;
+}
+h2{
+	color: #cccccc;
 }
