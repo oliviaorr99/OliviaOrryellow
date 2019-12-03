@@ -31,8 +31,8 @@ var ow_icons_map={
 
 var bkgrndgif={
 	//clear
-	"01d": "snow",
-    "01n": "snow",
+	"01d": "melt",
+    "01n": "melt",
     //few clouds
     "02d": "wind",
     "02n": "wind",
@@ -43,11 +43,11 @@ var bkgrndgif={
     "04d": "wind",
     "04n": "wind",
     //shower rain
-    "09d": "snow",
-    "09n": "snow",
+    "09d": "rain",
+    "09n": "rain",
     //rain
-    "10d": "snow",
-    "10n": "snow",
+    "10d": "rain",
+    "10n": "rain",
     //thunder storm
     "11d": "snow",
     "11n": "snow",
