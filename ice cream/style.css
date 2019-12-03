@@ -1,0 +1,152 @@
+/*
+    left: 10%; 
+
+*/
+div#error_box {
+  position: fixed; 
+  top: 10%; 
+  left: 10%;
+  z-index: 100; 
+  width: 60%;
+  display: none;
+  font-size: 0.6em;
+  background-color: #424242;
+  color: white;
+  padding: 5% 10%;
+  box-shadow: 6px 6px 8px #212121;
+}
+html {
+  background-color: black;
+  /*background-image: url("snow.gif");*/
+  background-repeat: no-repeat;
+  background-size: cover;/*auto 120vh;*/
+  background-position: center;
+}
+button {
+  display: block;
+  height: 2em;
+  width: 2em;
+  border: none;
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 1em;
+  padding :0px;
+  transition-duration: 0.4s;
+  float: right;
+}
+button:hover {
+  background-color: #ffe57f;
+  box-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+}
+button:focus {
+  background-color: #ffe57f;
+  box-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+  outline-style: none;
+}
+div#container {
+  overflow: auto;
+  width: 90vw;
+  position: fixed;
+  border-width: 2px;
+}
+div#container div > span:nth-of-type(1) {
+  float: left;
+  width: 60%
+}
+div#container div > span:nth-of-type(2) {
+  float: right;
+}
+div#container div,hr {
+  clear: both;
+}
+div.api-switcher {
+  font-size: 0.6em;
+  text-decoration: underline;
+  position: fixed;
+  margin-left: 20px;
+}
+a.active {
+  font-size: 1em;
+  opacity: 1;
+  margin-left: 20px;
+}
+a.inactive {
+  font-size: 1em;
+  opacity: 0.6;
+  transition-duration: 0.4s
+}
+a.inactive:hover {
+  font-size: 1em;
+  opacity: 1;
+}
+a.visited {
+  font-size: 25px;
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.1);
+}
+body {
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+  margin: 0px;
+}
+a {
+  text-decoration: underline;
+  color: white;
+  font-size: 25px;
+}
+@media screen and (min-width: 640px) and (min-height: 400px) {
+  body {
+    font-size: 25px;
+  }
+  div#container {
+  	margin-top: 30px;
+    width: 400px;
+    display: fixed;
+  }
+}
+.important {
+  font-size: 100px;
+  text-align: left;
+  display: fixed;
+}
+div#center {
+ /* can also be whatever container */
+  min-height:100vh;
+  display: fixed;
+  align-items: center;
+  content: left;
+  justify-content: left;
+}
+sup#l_temp_unit {
+  vertical-align: super;
+  font-size: smaller;
+}
+img {
+  position:fixed;
+  left:0;
+  top:0;
+}
+.right {
+  right: 0px;
+  color: rgba(255, 255, 255, 0.6);
+  width: 400px;
+}
+h1 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 50px;
+  color: black;
+  margin-top: -10px;
+  padding-top: 30px;
+  margin-left: -30px;
+  padding-left: 30px;
+  padding-bottom: 0px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  position: fixed;
+  background-color: white;
+}
+.w {
+  font-size: 225px;
+}
