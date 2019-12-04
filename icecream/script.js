@@ -49,8 +49,8 @@ var bkgrndgif={
     "10d": "rain",
     "10n": "rain",
     //thunder storm
-    "11d": "snow",
-    "11n": "snow",
+    "11d": "rain",
+    "11n": "rain",
     //snow
     "13d": "snow",
     "13n": "snow",
@@ -121,9 +121,30 @@ var w_api = {
 
   makeResp: function(r, dst_api) {
      if (dst_api === "ow") {
+	  if (r.wind.speed*2.237 >= 16) {
+		 var weatherDescription = "Hold on to your cone!";
+		 var weatherGif = "wind"; 
+	  }
+	  else if (bkgrndgif[r.weather[0].icon] == "rain") {
+		 var weatherDescription = "Moist...";
+		 var weatherGif = "rain";
+	  }
+	  else if (bkgrndgif[r.weather[0].icon] == "snow") {
+		 var weatherDescription = "Snow cone!";
+		 var weatherGif = "snow";
+	  }
+	  else if (Math.round((r.main.temp*9)/5-459.67) >= 60) {
+		 var weatherDescription = "Lick fast!";
+		 var weatherGif = "melt";
+	  }
+	  else {
+		 var weatherDescription = "Perfect ice cream weather! =)";
+		 var weatherGif = "cold";
+	  } 
+	
       this.resp.ow = {
         "city" : r.name,
-        "description": r.weather[0].main,
+        "description": weatherDescription/*r.weather[0].main*/,
         "temp_c": Math.round(r.main.temp-273.15),
         "temp_f": Math.round((r.main.temp*9)/5-459.67),
         "pressure": r.main.pressure,
@@ -135,7 +156,8 @@ var w_api = {
         "icon": ow_icons_map[r.weather[0].icon],
         "time" : this.format_time(new Date())
       };
-      document.body.style.background = "url('"+bkgrndgif[r.weather[0].icon]+".gif') no-repeat center center fixed";
+	  
+      document.body.style.background = "url('"+weatherGif+".gif') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
     else {

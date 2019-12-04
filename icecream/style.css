@@ -96,6 +96,9 @@ a {
   color: white;
   font-size: 25px;
 }
+.col {
+  width: 400px;
+}
 @media screen and (min-width: 640px) and (min-height: 400px) {
   body {
     font-size: 25px;
